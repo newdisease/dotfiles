@@ -1,4 +1,3 @@
-
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -9,16 +8,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git docker zsh-autosuggestions zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
+if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
 
-export LANG=en_US.UTF-8
+# Source additional config
+[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.exports ]] && source ~/.exports
 
-alias ll="ls -la"
-alias l="ls -CF"
-
-alias pm="python manage.py"
-alias rs="python manage.py runserver"
-
+# Powerlevel10k config
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export PATH="$HOME/.local/bin:$PATH"
