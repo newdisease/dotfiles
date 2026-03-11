@@ -1,0 +1,23 @@
+[user]
+	email = andrii.kryvulko@hotmail.com
+	name = Andrii Kryvulko
+
+[safe]
+	directory = *
+
+[color]
+	ui = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+
+[help]
+	autocorrect = 1
+
+[core]
+	autocrlf = input
+	editor = code --wait
+
+[init]
+	defaultBranch = main
