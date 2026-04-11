@@ -1,15 +1,4 @@
-# General
 alias ll="ls -la"
 alias l="ls -CF"
 alias ..="cd .."
 alias ...="cd ../.."
-
-# Python / Django
-alias pm="python manage.py"
-alias rs="python manage.py runserver"
-
-# Git (short aliases beyond .gitconfig)
-alias gs="git status"
-alias gd="git diff"
-alias gp="git push"
-alias gl="git pull"
